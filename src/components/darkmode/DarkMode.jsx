@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './darkmode.css';
+import ThemeContext from '../../context/ThemeContext';
 
 const DarkMode = () => {
     const [darkMode, setDarkMode] = useState(false);
+    const color = useContext(ThemeContext);
 
     const checkbox = document.querySelector('#checkbox');
     if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -24,7 +26,7 @@ const DarkMode = () => {
 
     return (
         <div className="dark-mode">
-            <p className="dark-mode title"> Dark Mode </p>
+            <p className="dark-mode title" style={{ color }}> Dark Mode </p>
             <input type="checkbox" className="checkbox" id="checkbox" onClick={handleClick}/>
             <label className="switch" htmlFor="checkbox">
             </label>
