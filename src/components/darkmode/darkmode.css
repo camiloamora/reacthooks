@@ -1,0 +1,58 @@
+.isDarkMode {
+    --cardGray: #252b43;
+    --baseBackground: #1d2029;
+    --baseColor: white;
+    --gray: #8088ad;
+    --lightGray: #1d2029;
+    --cardTitle: #8088ad;
+    --switchSpinner: #282943;
+    --switch: linear-gradient(to right, #378fe6 0%, #3eda82 100%);
+}
+
+.isLightMode {
+    --gray: #5f616d;
+    --cardGray: #f0f3fa;
+    --lightGray: #f8f9fe;
+    --cardTitle: #6f717e;
+    --baseBackground: white;
+    --baseColor: #1d2029;
+    --switchSpinner: white;
+    --switch: #5f616d;
+}
+
+.dark-mode {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox{
+    display: none;
+}
+.checkbox:checked ~ .switch:before{
+    transform: translateX(0px);
+}
+
+.switch {
+    height: 25px;
+    display: block;
+    border-radius: 17px;
+    background: var(--switch);
+    width: 50px;
+    padding: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+}
+
+.switch:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: var(--switchSpinner);
+    border-radius: 50%;
+    transform: translateX(25px);
+    transition: .3s;
+    will-change: transform;
+}
