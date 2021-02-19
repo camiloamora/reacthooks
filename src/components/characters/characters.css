@@ -1,3 +1,18 @@
 .top-cards {
-    margin-top: -50px;
+    margin-top: 10px;
+}
+
+
+.Characters-favorite img{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
+
+.Characters-favorite figure{
+    margin: 5px 0 0 0;
+}
+
+.Characters-favorite h5{
+    margin: 0px;
 }
